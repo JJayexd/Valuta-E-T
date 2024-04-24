@@ -1,9 +1,23 @@
-/*  gode ideer og tips:
+function Calculate() {
 
-hvis du vil begrænse antallet af decimaler på dit resultat, så brug methoden toFixed(antal decimaler)  eks.  result.toFixed(2) giver et resultat med 2 decimaler
+    const Beløb = document.getElementById('Beløb').value
+    const Currency = document.getElementById('Currency').value
+    
+    let Conversion
+    if (Currency === "USD") {
+        Conversion = Beløb / 6.97
+    }
+        else if (Currency === "Euro") {
+        Conversion = Beløb / 7.46
+        }
 
-hvis du vil have navnet på din valuta med fra options i dit select tag, så undersøg denne linje...
- let myCurrency = mySelectElement.options[mySelectElement.selectedIndex].innerText
- prøv evt. at consol logge mySelectElement.options, hvor mySelectElement er det select element du har fundet i din DOM med getElementById()
+    let Kurs
+    if (Currency === 'USD') {
+        Kurs = 'USD'
+    }
+        else if (Currency === 'Euro') {
+            Kurs = 'Euro'
+        }
 
- */
+    document.getElementById('Result').innerHTML = `${Conversion.toFixed(2)}` + ` ${Kurs}`
+}
