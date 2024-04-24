@@ -10,6 +10,9 @@ function Calculate() {
         else if (Currency === "Euro") {
         Conversion = Beløb / 7.46
         }
+            else if (Currency === 'GBP') {
+                Conversion = Beløb / 8.68
+            }
 
     let Kurs
     if (Currency === 'USD') {
@@ -18,6 +21,9 @@ function Calculate() {
         else if (Currency === 'Euro') {
             Kurs = 'Euro'
         }
+            else if (Currency === 'GBP') {
+                Kurs = 'GBP'
+            }
 
     document.getElementById('Result').innerHTML = `${Conversion.toFixed(2)}` + ` ${Kurs}`
 }
