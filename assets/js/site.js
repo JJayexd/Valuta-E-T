@@ -4,10 +4,10 @@ function Calculate() {
     const Currency = document.getElementById('Currency').value
     
     let Conversion
-    if (Currency === "USD") {
+    if (Currency === 'USD') {
         Conversion = Beløb / 6.97
     }
-        else if (Currency === "Euro") {
+        else if (Currency === 'Euro') {
         Conversion = Beløb / 7.46
         }
             else if (Currency === 'GBP') {
